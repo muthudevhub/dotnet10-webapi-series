@@ -1,4 +1,4 @@
-.NET 10 Web API Series
+C# .NET 10 Web API Series
 
 A complete step-by-step series for building modern, scalable Web APIs using .NET 10. Ideal for beginners and experienced developers looking to strengthen their API development skills.
 
