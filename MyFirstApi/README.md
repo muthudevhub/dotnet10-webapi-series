@@ -14,5 +14,5 @@ This repository contains a beginner-friendly ASP.NET Core Web API built using .N
 3. Press F5 to run
 4. Open Swagger at `/swagger`
 
-## 📺 YouTube Tutorial
+## YouTube Tutorial
 https://www.youtube.com/@MuthuDevHub
