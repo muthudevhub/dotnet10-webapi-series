@@ -1,6 +1,7 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -59,6 +60,15 @@ namespace MyFirstApi.Controllers
                 // 8 If validation fails, reject the request
                 return Unauthorized($"Token validation failed: {ex.Message}");
             }
+        }
+
+        [HttpGet("auto")] // GET /auto
+        [Authorize]
+        public IActionResult SecureAuto()
+        {
+            var username = User.Identity.IsAuthenticated ? User.Identity?.Name : "";
+
+            return Ok($"Welcome {username}, you are authorized automatically!");
         }
     }
 }

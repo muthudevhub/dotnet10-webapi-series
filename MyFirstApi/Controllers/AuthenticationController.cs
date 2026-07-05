@@ -43,7 +43,7 @@ namespace MyFirstApi.Controllers
             // create the token
             var token = new JwtSecurityToken(
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(30),
+                expires: DateTime.Now.AddSeconds(5),
                 signingCredentials: creds
             );
 

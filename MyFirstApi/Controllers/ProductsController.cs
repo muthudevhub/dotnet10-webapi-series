@@ -47,6 +47,7 @@ namespace MyFirstApi.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public IActionResult AddProduct([FromBody] Product product)
         {
             products.Add(product);
